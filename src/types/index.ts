@@ -1,81 +1,46 @@
-// 家庭成员类型
-export interface FamilyMember {
-  id: string;
-  name: string;
-  relationship: string;
-  ageGroup: string;
-  avatar: string;
-  similarity: number;
-  createdAt: Date;
-  lastInteraction: Date;
-  description?: string;
-}
+// 前端专属类型
+// 领域模型类型已迁移至 @shared/types，供前后端共享
+// 此文件保留前端专属的类型补充
 
-// 点滴记录类型
-export interface MemoryRecord {
-  id: string;
-  memberId: string;
-  type: 'voice' | 'chat' | 'event' | 'photo' | 'interview' | 'daily';
-  content: string;
-  timestamp: Date;
-  visibility: 'public' | 'semi-public' | 'private';
-  tags: string[];
-  title?: string;
-}
+// 重新导出共享类型，保持现有 @/types 引用兼容
+export type {
+  FamilyMember,
+  MemoryRecord,
+  ChatMessage,
+  Expert,
+  User,
+  Family,
+  FamilyValue,
+  FamilyGoal,
+  TimelineEvent,
+  TodayQuestion,
+  Profile,
+  PrivateEntry,
+  PerspectiveAnalysis,
+  PerspectiveView,
+} from '@shared/types';
 
-// 对话消息类型
-export interface ChatMessage {
-  id: string;
-  memberId: string;
-  role: 'user' | 'ai';
-  content: string;
-  timestamp: Date;
-}
+export type {
+  DataVisibility,
+  MemoryType,
+  ChatRole,
+  GoalStatus,
+  TimelineEventType,
+  PrivateEntryType,
+  FamilyRelationship,
+  ExpertSpecialty,
+} from '@shared/types';
 
-// 专家类型
-export interface Expert {
-  id: string;
-  name: string;
-  specialty: string;
-  avatar: string;
-  description: string;
-}
-
-// 用户类型
-export interface User {
-  id: string;
-  name: string;
-  avatar: string;
-  isParent: boolean;
-  childrenIds: string[];
-}
-
-// 家庭价值观
-export interface FamilyValue {
-  id: string;
-  title: string;
-  content: string;
-  createdAt: Date;
-  agreedBy: string[];
-}
-
-// 共同目标
-export interface FamilyGoal {
-  id: string;
-  title: string;
-  description: string;
-  targetDate?: Date;
-  status: 'planning' | 'ongoing' | 'completed';
-  participants: string[];
-}
-
-// 时间线事件
-export interface TimelineEvent {
-  id: string;
-  date: Date;
-  title: string;
-  description: string;
-  type: 'memory' | 'photo' | 'event' | 'milestone';
-  photoUrl?: string;
-  participants: string[];
-}
+export type {
+  ApiResponse,
+  PaginatedResponse,
+  PaginationParams,
+  LoginRequest,
+  LoginResponse,
+  RegisterRequest,
+  CreateFamilyMemberRequest,
+  CreateMemoryRequest,
+  ChatRequest,
+  PerspectiveRequest,
+  SimulateRequest,
+} from '@shared/types';

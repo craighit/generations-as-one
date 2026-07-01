@@ -1,4 +1,4 @@
-import type { FamilyMember, Expert, MemoryRecord, TimelineEvent, FamilyValue, FamilyGoal } from '@/types';
+import type { FamilyMember, Expert, MemoryRecord, TimelineEvent, FamilyValue, FamilyGoal } from '@shared/types';
 
 // 家庭成员 Mock 数据
 export const mockFamilyMembers: FamilyMember[] = [
@@ -9,8 +9,8 @@ export const mockFamilyMembers: FamilyMember[] = [
     ageGroup: '60后',
     avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=a warm smiling Chinese father in his 60s, gentle expression, family portrait style, soft lighting&image_size=square_hd',
     similarity: 92,
-    createdAt: new Date('2026-01-15'),
-    lastInteraction: new Date('2026-07-01'),
+    createdAt: '2026-01-15',
+    lastInteraction: '2026-07-01',
     description: '典型的60后，当过兵，现在退休了，爱下棋',
   },
   {
@@ -20,8 +20,8 @@ export const mockFamilyMembers: FamilyMember[] = [
     ageGroup: '60后',
     avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=a warm smiling Chinese mother in her 60s, caring expression, family portrait style, soft lighting&image_size=square_hd',
     similarity: 87,
-    createdAt: new Date('2026-01-15'),
-    lastInteraction: new Date('2026-06-30'),
+    createdAt: '2026-01-15',
+    lastInteraction: '2026-06-30',
     description: '温柔体贴，喜欢做饭，总是担心孩子们吃不好',
   },
   {
@@ -31,8 +31,8 @@ export const mockFamilyMembers: FamilyMember[] = [
     ageGroup: '40后',
     avatar: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=a warm smiling Chinese grandmother in her 80s, loving expression, family portrait style, soft lighting&image_size=square_hd',
     similarity: 76,
-    createdAt: new Date('2026-02-10'),
-    lastInteraction: new Date('2026-06-28'),
+    createdAt: '2026-02-10',
+    lastInteraction: '2026-06-28',
     description: '慈祥的老人，喜欢给孙辈讲故事',
   },
 ];
@@ -80,14 +80,14 @@ export const mockExperts: Expert[] = [
 export const mockTodayQuestion = {
   id: 'q1',
   question: '今天妈妈做了什么让你印象深刻的事？',
-  date: new Date('2026-07-01'),
+  date: '2026-07-01',
 };
 
 // 时光走廊事件 Mock 数据
 export const mockTimelineEvents: TimelineEvent[] = [
   {
     id: 't1',
-    date: new Date('2026-06-20'),
+    date: '2026-06-20',
     title: '端午节全家团聚',
     description: '大家一起包粽子，奶奶教孩子们传统包法',
     type: 'event',
@@ -96,7 +96,7 @@ export const mockTimelineEvents: TimelineEvent[] = [
   },
   {
     id: 't2',
-    date: new Date('2026-05-15'),
+    date: '2026-05-15',
     title: '爸爸退休庆祝',
     description: '为爸爸准备了退休庆祝晚餐，全家团聚',
     type: 'milestone',
@@ -105,7 +105,7 @@ export const mockTimelineEvents: TimelineEvent[] = [
   },
   {
     id: 't3',
-    date: new Date('2026-03-08'),
+    date: '2026-03-08',
     title: '三八节给妈妈的惊喜',
     description: '孩子们准备了鲜花和手工礼物',
     type: 'event',
@@ -114,7 +114,7 @@ export const mockTimelineEvents: TimelineEvent[] = [
   },
   {
     id: 't4',
-    date: new Date('2026-01-01'),
+    date: '2026-01-01',
     title: '新年家庭合影',
     description: '在新年第一天拍摄了全家福',
     type: 'photo',
@@ -129,21 +129,21 @@ export const mockFamilyValues: FamilyValue[] = [
     id: 'v1',
     title: '家庭和睦',
     content: '家和万事兴，相互理解、包容是家庭的基石',
-    createdAt: new Date('2026-02-01'),
+    createdAt: '2026-02-01',
     agreedBy: ['爸爸', '妈妈', '奶奶', '小明'],
   },
   {
     id: 'v2',
     title: '诚实守信',
     content: '做人要诚实，做事要守信，这是长辈教给我们的道理',
-    createdAt: new Date('2026-03-01'),
+    createdAt: '2026-03-01',
     agreedBy: ['爸爸', '妈妈', '小明'],
   },
   {
     id: 'v3',
     title: '勤俭节约',
     content: '不浪费，懂得珍惜每一份资源和劳动成果',
-    createdAt: new Date('2026-04-01'),
+    createdAt: '2026-04-01',
     agreedBy: ['奶奶', '爸爸', '妈妈'],
   },
 ];
@@ -154,7 +154,7 @@ export const mockFamilyGoals: FamilyGoal[] = [
     id: 'g1',
     title: '今年一起去海南旅行',
     description: '全家一起去海南度假，享受阳光沙滩',
-    targetDate: new Date('2026-10-01'),
+    targetDate: '2026-10-01',
     status: 'planning',
     participants: ['爸爸', '妈妈', '奶奶', '小明'],
   },
@@ -174,7 +174,7 @@ export const mockMemoryRecords: MemoryRecord[] = [
     memberId: '1',
     type: 'daily',
     content: '爸爸今天说"做人要踏实，不要急功近利"',
-    timestamp: new Date('2026-06-28'),
+    timestamp: '2026-06-28',
     visibility: 'public',
     tags: ['人生道理', '父亲的教导'],
     title: '人生教导',
@@ -184,7 +184,7 @@ export const mockMemoryRecords: MemoryRecord[] = [
     memberId: '2',
     type: 'event',
     content: '妈妈今天特意做了我爱吃的红烧肉，说工作辛苦要补补',
-    timestamp: new Date('2026-06-25'),
+    timestamp: '2026-06-25',
     visibility: 'public',
     tags: ['关爱', '美食', '母爱'],
     title: '妈妈的关怀',

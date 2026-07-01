@@ -74,7 +74,7 @@ function TimelineSection() {
               <div className="flex items-start justify-between">
                 <div>
                   <p className="text-xs text-text-muted mb-1">
-                    {event.date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    {new Date(event.date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </p>
                   <h3 className="font-semibold text-text-primary">{event.title}</h3>
                   <p className="text-sm text-text-secondary mt-1">{event.description}</p>
@@ -166,7 +166,7 @@ function GoalsSection() {
           <p className="text-sm text-text-secondary leading-relaxed">{goal.description}</p>
           {goal.targetDate && (
             <p className="text-xs text-text-muted mt-2">
-              目标日期：{goal.targetDate.toLocaleDateString('zh-CN')}
+              目标日期：{new Date(goal.targetDate).toLocaleDateString('zh-CN')}
             </p>
           )}
           <div className="flex items-center gap-2 mt-3">

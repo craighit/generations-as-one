@@ -120,13 +120,14 @@ export default function Home() {
   );
 }
 
-function formatDate(date: Date): string {
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr);
   const now = new Date();
   const diff = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
-  
+
   if (diff === 0) return '今天';
   if (diff === 1) return '昨天';
   if (diff < 7) return `${diff}天前`;
-  
+
   return date.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' });
 }

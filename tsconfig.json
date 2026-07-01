@@ -26,11 +26,14 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@shared/*": [
+        "./shared/*"
       ]
     }
   },
   "include": [
     "src",
-    "api"
+    "shared"
   ]
 }

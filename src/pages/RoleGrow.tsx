@@ -85,7 +85,7 @@ export default function RoleGrow() {
                 </div>
                 <div className="mt-4 pt-4 border-t border-warm-100 flex items-center justify-between">
                   <span className="text-xs text-text-muted">
-                    创建于 {member.createdAt.toLocaleDateString('zh-CN')}
+                    创建于 {new Date(member.createdAt).toLocaleDateString('zh-CN')}
                   </span>
                   <button className="px-3 py-1 bg-warm-100 rounded-lg text-sm text-warm-600 hover:bg-warm-200 transition-colors">
                     对话
@@ -150,7 +150,7 @@ export default function RoleGrow() {
                         <p className="text-sm text-text-secondary mt-1">{record.content}</p>
                         <div className="flex items-center gap-2 mt-2">
                           <span className="text-xs text-text-muted">
-                            {record.timestamp.toLocaleDateString('zh-CN')}
+                            {new Date(record.timestamp).toLocaleDateString('zh-CN')}
                           </span>
                           {record.tags.map((tag) => (
                             <span key={tag} className="px-2 py-1 bg-warm-50 rounded text-xs text-warm-600">
